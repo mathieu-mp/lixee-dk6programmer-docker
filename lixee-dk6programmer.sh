@@ -56,5 +56,5 @@ main() {
 }
 
 #main "${@}"
-DK6Programmer --list
+log `DK6Programmer --list`
 #-s <PORT COM> -P 115200 -Y -p <CHEMIN_BINAIRE.bin>
