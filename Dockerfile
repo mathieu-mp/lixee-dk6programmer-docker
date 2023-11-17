@@ -2,7 +2,7 @@ FROM debian:buster-slim
 
 RUN apt-get update -y
 RUN apt-get install -y wget file
-RUN apt-get install -y libncurses5-dev libusb-1.0-0-dev libftdi1 libftdi1-dev libudev-dev
+RUN apt-get install -y libncurses5 libusb-1.0-0-dev libftdi1 libftdi1-dev libudev-dev
 
 WORKDIR /tmp
 RUN wget --no-verbose https://zigate.fr/wp-content/uploads/2021/05/x86_64.tar
