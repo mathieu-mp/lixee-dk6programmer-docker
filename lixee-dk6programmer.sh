@@ -47,7 +47,8 @@ main() {
     source="${FIRMWARE_FILE}"
   elif [ -n "${FIRMWARE_URL-}" ]; then
     log "Downloading firmware from ${FIRMWARE_URL}"
-    source="$(wget "${FIRMWARE_URL}" 2>&1 | sed -nE "s/^'(.+)' saved$/\1/p")"
+    source="firmware.bin"
+    wget "${FIRMWARE_URL}" -O $source
     [ -n "${source}" ] || error "Download of firmware was not successful."
   else
     log "WARNING: neither FIRMWARE_URL nor FIRMWARE_FILE is set as environment variable."
