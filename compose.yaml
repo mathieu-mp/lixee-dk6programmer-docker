@@ -1,0 +1,18 @@
+---
+services:
+  lixee-dk6programmer:
+    image: "lixee-dk6programmer"
+    environment:
+      FIRMWARE_URL: "https://github.com/fairecasoimeme/Zlinky_TIC/releases/download/v13.0/ZLinky_router_v13_limited.bin"
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+
+    ## Décommenter l'opération attendue
+    # Liste les ports série
+    # command: [ "--list" ]
+
+    # Flasher sans remise à zéro (Conserve les appareils déjà appairés)
+    #command: [ "--serial", "/dev/ttyUSB0", "--programbaud", "115200", "--force", "--program", "firmware.bin" ]
+
+    # Flasher avec remise à zéro (Efface toutes les données, appairages compris)
+    #command: [ "--serial", "/dev/ttyUSB0", "--programbaud", "115200", "--erase", "FLASH", "--force", "--program", "firmware.bin" ]
