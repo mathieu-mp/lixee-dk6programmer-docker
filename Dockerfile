@@ -10,3 +10,6 @@ RUN wget --no-verbose https://zigate.fr/wp-content/uploads/2021/05/AArch64_Buste
 RUN tar -xvf AArch64_Buster-1.tar
 RUN rm --force AArch64_Buster-1.tar
 RUN chmod +x DK6Programmer
+
+ENTRYPOINT /bin/bash -i /opt/lixee-dk6programmer/DK6Programmer
+CMD ["--list"]
