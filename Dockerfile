@@ -1,7 +1,7 @@
 FROM debian:buster-slim
 
 RUN apt-get update -y
-RUN apt-get install -y wget
+RUN apt-get install -y wget file
 RUN apt-get install -y libncurses-dev libusb-1.0-0-dev libftdi1 libftdi1-dev libudev-dev
 
 WORKDIR /tmp
