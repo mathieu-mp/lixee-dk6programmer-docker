@@ -12,5 +12,6 @@ RUN chmod +x /usr/local/bin/DK6Programmer
 
 ADD lixee-dk6programmer.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/lixee-dk6programmer.sh
+RUN ls -lh /usr/local/bin/ | grep -i DK6Programmer
 
 ENTRYPOINT ["lixee-dk6programmer.sh"]

@@ -38,7 +38,7 @@ run() {
       set -- "${@}" "${file}"
     fi
   fi
-  cc2538-bsl.py "${@}"
+  DK6Programmer "${@}"
 }
 
 main() {
@@ -55,6 +55,4 @@ main() {
   run "${source-}" "${@}"
 }
 
-#main "${@}"
-log `DK6Programmer --list`
-#-s <PORT COM> -P 115200 -Y -p <CHEMIN_BINAIRE.bin>
+main "${@}"
