@@ -11,5 +11,7 @@ RUN tar -xvf AArch64_Buster-1.tar
 RUN rm --force AArch64_Buster-1.tar
 RUN chmod +x DK6Programmer
 
-ENTRYPOINT /bin/bash -i /opt/lixee-dk6programmer/DK6Programmer
-CMD ["--list"]
+ADD lixee-dk6programmer.sh /usr/local/bin/
+
+WORKDIR /tmp
+ENTRYPOINT ["lixee-dk6programmer.sh"]
