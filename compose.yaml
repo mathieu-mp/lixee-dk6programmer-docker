@@ -8,11 +8,14 @@ services:
       - "/dev/ttyUSB0:/dev/ttyUSB0"
 
     ## Décommenter l'opération attendue
-    # Liste les ports série
-    # command: [ "--list" ]
+    # Afficher l'aide de DK6Programmer
+    # command: [ "--help" ]
+    
+    # Lister les ports série
+    command: [ "--list" ]
 
     # Flasher sans remise à zéro (Conserve les appareils déjà appairés)
-    #command: [ "--serial", "/dev/ttyUSB0", "--programbaud", "115200", "--force", "--program", "firmware.bin" ]
+    # command: [ "--verbosity", "2", "--nodevicereset", "--serial", "/dev/ttyUSB0", "--programbaud", "115200", "--force", "--program" ]
 
     # Flasher avec remise à zéro (Efface toutes les données, appairages compris)
-    #command: [ "--serial", "/dev/ttyUSB0", "--programbaud", "115200", "--erase", "FLASH", "--force", "--program", "firmware.bin" ]
+    # command: [ "--verbosity", "2", "--nodevicereset", "--serial", "/dev/ttyUSB0", "--programbaud", "115200", "--erase", "FLASH", "--force", "--program" ]
